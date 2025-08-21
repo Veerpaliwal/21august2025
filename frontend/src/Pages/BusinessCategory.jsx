@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import '../App.css'   // CSS ka path check kar lena
+import '../App.css'   
+import { Link } from 'react-router-dom';
 
 function BusinessCategory() {
   const [businessCategory] = useState([
@@ -81,10 +82,10 @@ function BusinessCategory() {
     <ul className="grid-list">
       {businessCategory.map((cv, idx) => (
         <li key={idx} className="grid-item">
-          <a href="#">
-            <img src={cv.icon_url} alt={cv.category_name} />
-            <p>{cv.category_name}</p>
-          </a>
+         <Link to={`/business-listing/${cv.category_name}`}>
+          <img src={cv.icon_url} alt={cv.category_name} />
+          <p>{cv.category_name}</p>
+        </Link>
         </li>
       ))}
     </ul>

@@ -1,0 +1,26 @@
+
+/* App.css */
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  /* Show 6 items in a row */
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+  margin: 20px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.grid-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
